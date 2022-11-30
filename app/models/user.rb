@@ -5,7 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   scope :all_except, ->(user) { where.not(id: user) }
   after_create_commit { broadcast_append_to 'users' }
+  after_update_commit { broadcast_update }
   has_many :messages
+
+  enum status: %i[offline away online]
 
   has_one_attached :avatar do |attachable|
     attachable.variant :avatar_thumbnail, resize_to_limit: [150, 150]
@@ -13,6 +16,23 @@ class User < ApplicationRecord
   end
 
   after_commit :add_default_avatar, on: %i[create update]
+
+  def broadcast_update
+    broadcast_replace_to 'user_status', partial: 'users/status', user: self
+  end
+
+  def status_to_css
+    case status
+    when 'online'
+      'bg-success'
+    when 'away'
+      'bg-warning'
+    when 'offline'
+      'bg-dark'
+    else
+      'bg-dark'
+    end
+  end
 
   private
 
