@@ -1,0 +1,4 @@
+  [1m[36mUser Update All (1.4ms)[0m  [1m[33mUPDATE "users" SET "status" = ?[0m  [["status", 0]]
+  ↳ config/initializers/user_status.rb:6:in `block in <class:UserStatus>'
+  [1m[36mUser Update All (0.1ms)[0m  [1m[33mUPDATE "users" SET "status" = ?[0m  [["status", 0]]
+  ↳ config/initializers/user_status.rb:6:in `block in <class:UserStatus>'
