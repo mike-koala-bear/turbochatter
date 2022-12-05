@@ -20,7 +20,7 @@ class Room < ApplicationRecord
   end
 
   def participant?(room, user)
-    room.participants.where(user:).exists?
+    room.participants.where(user: user).exists?
   end
 
   def latest_message
