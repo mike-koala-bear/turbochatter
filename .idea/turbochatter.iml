@@ -98,6 +98,7 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v7.0.4, RVM: ruby-3.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rainbow (v3.1.1, RVM: ruby-3.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, RVM: ruby-3.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redcarpet (v3.5.1, RVM: ruby-3.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis (v4.8.0, RVM: ruby-3.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.6.1, RVM: ruby-3.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.3.1, RVM: ruby-3.1.1) [gem]" level="application" />

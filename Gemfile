@@ -80,3 +80,5 @@ gem 'devise', '~> 4.8'
 gem 'pagy', '~> 5.10'
 
 gem 'noticed'
+
+gem "redcarpet", "~> 3.5.1"
