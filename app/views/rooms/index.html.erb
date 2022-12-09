@@ -11,8 +11,8 @@
           <%= render "users/status", user: current_user %>
         </div>
       </div>
-      <div class='ms-2 me-auto username'>
-        <%= current_user.email %>
+      <div class="ms-2 me-auto username">
+        <%= link_to current_user.email, current_user, class: "msg-role-#{current_user.role}" %>
       </div>
     </li>
     <h4> Users </h4>
