@@ -1,4 +1,4 @@
-do /Users/vitalyamos/.rvm/rubies/ruby-3.1.1/bin/ruby -x /Users/vitalyamos/RubymineProjects/turbochatter/bin/bundle exec /Users/vitalyamos/.rvm/rubies/ruby-3.1.1/bin/ruby /Users/vitalyamos/RubymineProjects/turbochatter/bin/rails routes --trace 
+do /Users/vitalyamos/.rvm/rubies/ruby-3.1.1/bin/ruby -x /Users/vitalyamos/Documents/GitHub/turbochatter/bin/bundle exec /Users/vitalyamos/.rvm/rubies/ruby-3.1.1/bin/ruby /Users/vitalyamos/Documents/GitHub/turbochatter/bin/rails routes --trace 
 Ruby enVironment Manager 1.29.12-next (master) (c) 2009-2020 Michal Papis, Piotr Kuczynski, Wayne E. Seguin
 
                                   Prefix Verb   URI Pattern                                                                                       Controller#Action
@@ -10,6 +10,7 @@ Ruby enVironment Manager 1.29.12-next (master) (c) 2009-2020 Michal Papis, Piotr
                                          PATCH  /rooms/:room_id/messages/:id(.:format)                                                            messages#update
                                          PUT    /rooms/:room_id/messages/:id(.:format)                                                            messages#update
                                          DELETE /rooms/:room_id/messages/:id(.:format)                                                            messages#destroy
+                            search_rooms POST   /rooms/search(.:format)                                                                           rooms#search
                                    rooms GET    /rooms(.:format)                                                                                  rooms#index
                                          POST   /rooms(.:format)                                                                                  rooms#create
                                 new_room GET    /rooms/new(.:format)                                                                              rooms#new
@@ -18,6 +19,8 @@ Ruby enVironment Manager 1.29.12-next (master) (c) 2009-2020 Michal Papis, Piotr
                                          PATCH  /rooms/:id(.:format)                                                                              rooms#update
                                          PUT    /rooms/:id(.:format)                                                                              rooms#update
                                          DELETE /rooms/:id(.:format)                                                                              rooms#destroy
+                              leave_room GET    /rooms/leave/:id(.:format)                                                                        rooms#leave
+                               join_room GET    /rooms/join/:id(.:format)                                                                         rooms#join
                                     root GET    /                                                                                                 pages#home
                         new_user_session GET    /users/sign_in(.:format)                                                                          users/sessions#new
                             user_session POST   /users/sign_in(.:format)                                                                          users/sessions#create
@@ -27,13 +30,13 @@ Ruby enVironment Manager 1.29.12-next (master) (c) 2009-2020 Michal Papis, Piotr
                            user_password PATCH  /users/password(.:format)                                                                         devise/passwords#update
                                          PUT    /users/password(.:format)                                                                         devise/passwords#update
                                          POST   /users/password(.:format)                                                                         devise/passwords#create
-                cancel_user_registration GET    /users/cancel(.:format)                                                                           registrations#cancel
-                   new_user_registration GET    /users/sign_up(.:format)                                                                          registrations#new
-                  edit_user_registration GET    /users/edit(.:format)                                                                             registrations#edit
-                       user_registration PATCH  /users(.:format)                                                                                  registrations#update
-                                         PUT    /users(.:format)                                                                                  registrations#update
-                                         DELETE /users(.:format)                                                                                  registrations#destroy
-                                         POST   /users(.:format)                                                                                  registrations#create
+                cancel_user_registration GET    /users/cancel(.:format)                                                                           users/registrations#cancel
+                   new_user_registration GET    /users/sign_up(.:format)                                                                          users/registrations#new
+                  edit_user_registration GET    /users/edit(.:format)                                                                             users/registrations#edit
+                       user_registration PATCH  /users(.:format)                                                                                  users/registrations#update
+                                         PUT    /users(.:format)                                                                                  users/registrations#update
+                                         DELETE /users(.:format)                                                                                  users/registrations#destroy
+                                         POST   /users(.:format)                                                                                  users/registrations#create
                                     user GET    /user/:id(.:format)                                                                               users#show
         turbo_recede_historical_location GET    /recede_historical_location(.:format)                                                             turbo/native/navigation#recede
         turbo_resume_historical_location GET    /resume_historical_location(.:format)                                                             turbo/native/navigation#resume
