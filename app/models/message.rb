@@ -60,9 +60,12 @@ class Message < ApplicationRecord
   def broadcast_to_home_page
     broadcast_prepend_later_to 'public_messages',
                                target: 'public_messages',
-                               partial: 'messages/messages_preview',
+                               partial: 'messages/message_preview',
                                locals: { message: self }
+
     message_to_remove = Message.where(room: Room.public_rooms).order(created_at: :desc).fifth
-    broadcast_remove_to 'public_messages', target: message_to_remove
+    unless message_to_remove.nil?
+      broadcast_remove_to 'public_messages', target: message_to_remove
+    end
   end
 end
