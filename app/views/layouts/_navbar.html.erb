@@ -24,7 +24,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <%= link_to "Admin", admin_dashboard_path, class: "nav-link" if current_user&.admin?%>
+        <%= link_to "Admin/Owner", admin_dashboard_path, class: "nav-link" if current_user&.admin? || current_user&.owner? %>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
