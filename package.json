@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@hotwired/stimulus": "^3.2.0",
+    "@rails/activestorage": "^7.0.4",
     "stimulus-use": "^0.51.1"
   }
 }
