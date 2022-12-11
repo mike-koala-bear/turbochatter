@@ -1,4 +1,4 @@
-<% if current_user.admin? %>
+<% if current_user.admin? || current_user.owner? %>
   <%= form_with(model: @room, remote: true, class: 'd-flex',
                 data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }) do |f| %>
     <%= f.text_field :name, class: 'form-control new-room-input', autocomplete: 'off',

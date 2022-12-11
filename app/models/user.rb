@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
   has_many :notifications, dependent: :destroy, as: :recipient
 
-  enum role: %i[user admin]
+  enum role: %i[user admin moderator owner]
   enum status: %i[offline away online dnd]
 
   after_commit :add_default_avatar, on: %i[create update]

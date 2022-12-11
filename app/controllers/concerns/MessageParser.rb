@@ -16,7 +16,7 @@ module MessageParser
   def role_manager(command)
     if command[0] == @role
       return unless current_user
-      return unless current_user.admin?
+      return unless current_user.admin? || current_user.owner? || current_user.moderator?
 
       target_username = command[1]
       target_role = command[2]
