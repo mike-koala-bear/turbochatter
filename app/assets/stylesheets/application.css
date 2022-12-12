@@ -178,3 +178,11 @@ body {
         opacity: 1;
     }
 }
+
+.btn-blue {
+    background-color: #10c4dc;
+}
+
+.navbar-pfp {
+    border-radius: 50%;
+}

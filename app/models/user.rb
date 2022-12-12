@@ -30,6 +30,10 @@ class User < ApplicationRecord
     avatar.variant(resize_to_limit: [50, 50]).processed
   end
 
+  def navbar_avatar
+    avatar.variant(resize_to_limit: [25, 25]).processed
+  end
+
   def broadcast_update
     broadcast_replace_to 'user_status', partial: 'users/status', user: self
   end
