@@ -1,0 +1,9 @@
+<h3 class="mt-2">Users Information</h3>
+<hr class="dropdown-divider">
+
+<h5><%= pluralize(User.count, "User") %> Created</h5>
+<h5><%= pluralize(User.online.count, "Users") %> Online</h5>
+<h5><%= pluralize(User.user.count, "User") %></h5>
+<h5><%= pluralize(User.admin.count, "Admin") %></h5>
+<h5><%= pluralize(User.moderator.count, "Moderator") %></h5>
+<h5><%= pluralize(User.owner.count, "Owner") %></h5>
