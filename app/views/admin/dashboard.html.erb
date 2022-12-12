@@ -1,6 +1,9 @@
 <div class="container m-5">
   <h1>Admin/Owner Page</h1>
   <h5>Daily Messages</h5>
-
   <%= area_chart(@messages) %>
+
+  <%= render 'admin/users_information' %>
+  <hr class="dropdown-divider">
+  <%= render 'admin/rooms_information' %>
 </div>
