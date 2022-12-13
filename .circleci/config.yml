@@ -26,5 +26,5 @@ workflows:
       - say-hello
 
 # Store test results and artifacts
-  store_test_results:
-      path: test-results
+store_test_results:
+    path: test-results
