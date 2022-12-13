@@ -1,9 +1,32 @@
 {
   "name": "turbochatter",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "dependencies": {
     "@hotwired/stimulus": "^3.2.0",
     "@rails/activestorage": "^7.0.4",
     "stimulus-use": "^0.51.1"
-  }
+  },
+  "description": "Chatroom app",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mike-koala-bear/turbochatter.git"
+  },
+  "author": "mike-koala-bear",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mike-koala-bear/turbochatter/issues"
+  },
+  "homepage": "https://github.com/mike-koala-bear/turbochatter#readme"
 }
