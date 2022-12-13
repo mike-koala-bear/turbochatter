@@ -12,12 +12,9 @@
     "lib": "lib",
     "test": "test"
   },
-  "devDependencies": {
-    "electron": "^22.0.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
   },
   "repository": {
     "type": "git",
