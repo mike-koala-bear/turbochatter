@@ -19,10 +19,7 @@
         <%= link_to "Admin/Owner", admin_dashboard_path,
                     class: "nav-link msg-role-#{current_user.role}" if current_user&.admin? || current_user&.owner? %>
       </li>
-
-      <% if current_user %>
-        <%= render 'layouts/navbar_dropdown' %>
-      <% end %>
+      <%= render 'layouts/navbar_dropdown' %>
       <%= render 'shared/links' %>
     </ul>
     <form class="form-inline my-2 my-lg-0">
