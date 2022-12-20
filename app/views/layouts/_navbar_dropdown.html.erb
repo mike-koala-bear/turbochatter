@@ -2,7 +2,7 @@
   <div class="dropdown">
     <a role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" class="nav-item btn btn-blue">
       <%= current_user.username if current_user %>
-      <%= image_tag(current_user.navbar_avatar, class: 'navbar-pfp') if current_user %>
+      <%# <%= image_tag(current_user.navbar_avatar, class: 'navbar-pfp') if current_user %> %>
     </a>
     <ul class="dropdown-menu bg-dark">
       <div class="ml-2">
