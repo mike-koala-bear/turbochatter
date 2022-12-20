@@ -2,4 +2,3 @@ node_modules
 config/credentials.yml.enc
 config/master.key
 tmp
-tmp
