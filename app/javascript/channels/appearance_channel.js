@@ -5,10 +5,12 @@ let timer = 0;
 
 consumer.subscriptions.create("AppearanceChannel", {
     initialized() {
+        console.log('Christmas has came! 🎄🎄🎄🎄🎄');
+        console.log("Appearance channel connecting....");
     },
     connected() {
         // Called when the subscription is ready for use on the server
-        console.log("Connected");
+        console.log("Connected to appearance channel");
         resetFunc = () => this.resetTimer(this.uninstall);
         this.install();
         window.addEventListener("turbo:load", () => this.resetTimer());
@@ -16,7 +18,7 @@ consumer.subscriptions.create("AppearanceChannel", {
 
     disconnected() {
         // Called when the subscription has been terminated by the server
-        console.log("Connected");
+        console.log("Disconnected");
         this.uninstall();
     },
     rejected() {
@@ -27,7 +29,7 @@ consumer.subscriptions.create("AppearanceChannel", {
         // Called when there's incoming data on the websocket for this channel
     },
     online() {
-        console.log("online");
+        console.log("Online");
         this.perform("online");
     },
     away() {

@@ -7,6 +7,7 @@ export default class Debounce extends Controller {
 
     connect() {
         this.clearParam(Debounce.input);
+        console.log("Debounce controller connected");
     }
 
     search() {

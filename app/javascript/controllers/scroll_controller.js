@@ -3,11 +3,12 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
     initialize() {
         this.resetScrollWithoutThreshold(messages);
+        console.log("Connecting to scroll controller... might take a while");
     }
 
     /** On start */
     connect() {
-        console.log("Connected scroll");
+        console.log("Connected to scroll controller");
         const messages = document.getElementById("messages");
         messages.addEventListener("DOMNodeInserted", this.resetScroll);
         this.resetScrollWithoutThreshold(messages);
@@ -15,7 +16,7 @@ export default class extends Controller {
 
     /** On stop */
     disconnect() {
-        console.log("Disconnected");
+        console.log("Disconnected from scroll controller");
     }
 
     /** Custom function */

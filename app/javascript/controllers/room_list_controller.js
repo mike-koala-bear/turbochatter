@@ -6,6 +6,11 @@ export default class extends Controller {
         const rooms = document.getElementById("rooms");
         this.initialModifyRooms(rooms);
         this.mutationObserver(rooms);
+        console.log("Initializing room list controller...");
+    }
+
+    connect() {
+        console.log("Connected to room list controller");
     }
 
     mutationObserver(rooms) {
