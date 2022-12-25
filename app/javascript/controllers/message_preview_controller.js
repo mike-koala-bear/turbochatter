@@ -7,6 +7,7 @@ import { DirectUpload } from "@rails/activestorage";
  */
 export default class extends Controller {
     connect() {
+        console.log('MessagePreviewController connected')
         this.audio()
     }
 

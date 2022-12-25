@@ -13,6 +13,7 @@
           <% if current_user.owner? || current_user.admin? %>
             <%= link_to "Owner/Admin Information Page", admin_dashboard_path, class: "btn btn-success" %>
           <% end %>
+          <%= link_to "Go to dashboard", dashboard_path, class: 'btn btn-info' %>
           <%= link_to "Edit Account", edit_user_registration_path, class: 'btn btn-secondary' %>
           <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
         </div>
