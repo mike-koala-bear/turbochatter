@@ -1,0 +1,477 @@
+2022-12-27 14:54:25[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 14:54:39[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 14:54:47[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 14:55:23[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 14:55:25[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 14:55:44[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 14:56:46[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 14:57:10[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 14:59:07[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-12-27 14:59:07[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:room]
+  Add to your query: .includes([:room])
+Call stack
+
+2022-12-27 14:59:49[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-12-27 14:59:49[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:room]
+  Add to your query: .includes([:room])
+Call stack
+
+2022-12-27 15:00:19[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-12-27 15:00:19[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:room]
+  Add to your query: .includes([:room])
+Call stack
+
+2022-12-27 15:01:08[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:user]
+  Add to your query: .includes([:user])
+Call stack
+
+2022-12-27 15:01:08[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:room]
+  Add to your query: .includes([:room])
+Call stack
+
+2022-12-27 15:01:26[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:room]
+  Add to your query: .includes([:room])
+Call stack
+
+2022-12-27 15:01:29[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:room]
+  Add to your query: .includes([:room])
+Call stack
+
+2022-12-27 15:03:50[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:04:49[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:04:53[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:05:51[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:06:13[WARN] user: vitalyamos
+GET /rooms
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:06:41[WARN] user: vitalyamos
+GET /rooms
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:06:53[WARN] user: vitalyamos
+GET /rooms
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:07:14[WARN] user: vitalyamos
+GET /rooms
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:07:52[WARN] user: vitalyamos
+GET /rooms
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:09:53[WARN] user: vitalyamos
+GET /rooms
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:10:13[WARN] user: vitalyamos
+GET /rooms
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:10:15[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:10:15[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:10:42[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:10:42[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:26:37[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:26:37[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:27:07[WARN] user: vitalyamos
+GET /rooms/
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:29:27[WARN] user: vitalyamos
+GET /rooms/
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:29:51[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:29:51[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:29:55[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:29:55[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:30:00[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:30:00[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:30:05[WARN] user: vitalyamos
+GET /rooms/
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:32:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:31:29[WARN] user: vitalyamos
+GET /rooms/
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:32:01[WARN] user: vitalyamos
+GET /rooms/
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:13:in `index'
+
+2022-12-27 15:32:05[WARN] user: vitalyamos
+GET /user/2
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/users_controller.rb:20:in `show'
+
+2022-12-27 15:32:11[WARN] user: vitalyamos
+GET /user/2
+USE eager loading detected
+  User => [:avatar_attachment]
+  Add to your query: .includes([:avatar_attachment])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/users_controller.rb:20:in `show'
+
+2022-12-27 15:32:21[WARN] user: vitalyamos
+GET /user/2
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/users_controller.rb:20:in `show'
+
+2022-12-27 15:32:25[WARN] user: vitalyamos
+GET /user/2
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/users_controller.rb:20:in `show'
+
+2022-12-27 15:32:48[WARN] user: vitalyamos
+GET /user/2
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/users_controller.rb:20:in `show'
+
+2022-12-27 15:33:19[WARN] user: vitalyamos
+GET /user/2
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/users_controller.rb:20:in `show'
+
+2022-12-27 15:34:57[WARN] user: vitalyamos
+GET /user/2
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/users_controller.rb:20:in `show'
+
+2022-12-27 15:35:01[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:35:01[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:35:17[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  ActiveStorage::Attachment => [:blob]
+  Add to your query: .includes([:blob])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/models/user.rb:30:in `chat_avatar'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
+2022-12-27 15:35:17[WARN] user: vitalyamos
+GET /rooms/1
+USE eager loading detected
+  Message => [:attachments_attachments]
+  Add to your query: .includes([:attachments_attachments])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
+
