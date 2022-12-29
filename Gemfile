@@ -88,3 +88,5 @@ gem 'chartkick', '~> 4.2'
 gem 'groupdate', '~> 6.1'
 
 gem 'aws-sdk-s3'
+
+gem "htmlbeautifier", "~> 1.4"

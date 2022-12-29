@@ -14,7 +14,8 @@
     </div>
     <div class="field">
       <%= f.label :username %>
-      <%= f.text_field :username, required: true %>
+      <%= f.text_field :username, required: true, class: 'form-control w-4' %>
+      <%#= f.label :username %>
     </div>
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>

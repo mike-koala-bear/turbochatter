@@ -16,11 +16,10 @@
         <a class="nav-link" href="/rooms">Start Chatting</a>
       </li>
       <li class="nav-item">
-        <%= link_to "Admin/Owner", admin_dashboard_path,
-                    class: "nav-link msg-role-#{current_user.role}" if current_user&.admin? || current_user&.owner? %>
+        <%= link_to "Admin/Owner", admin_dashboard_path, class: "nav-link" %>
       </li>
       <%= render 'layouts/navbar_dropdown' %>
-      <%#= render 'shared/links' %>
+      <%= render 'shared/links' %>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
