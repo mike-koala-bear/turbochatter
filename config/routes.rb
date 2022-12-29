@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'versions', to: 'versions#index'
   get 'dashboard', to: 'dashboard#index'
   get 'admin/dashboard'
   resources :rooms do

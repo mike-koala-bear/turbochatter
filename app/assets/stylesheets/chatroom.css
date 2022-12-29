@@ -154,7 +154,7 @@
 .msg-role-owner {
     color: #e312d7 !important;
 }
-/* Animate in a message error absolute pos */
+
 .message-error {
     position: absolute;
     top: 56;
