@@ -1,0 +1,17 @@
+<% currentVersion = '1.0.7' %>
+<% shortCurrentVersion = '1.0' %>
+<li class="nav-item dropdown show d-flex">
+    <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <%= currentVersion %>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+    <a class="dropdown-item active" href="/">Latest (<%= shortCurrentVersion %>.x)</a>
+    <a class="dropdown-item" href="https://github.com/mike-koala-bear/turbochatter/releases/tag/v1.0.7">Latest Github version</a>
+    <a class="dropdown-item" href="https://github.com/mike-koala-bear/turbochatter/releases/tag/v0.7.6-beta">v0.7.6 Beta</a>
+    <hr class="dropdown-divider">
+    <a class="dropdown-item" href="https://github.com/mike-koala-bear/turbochatter/releases/tag/v0.7.6">v0.7.6</a>
+    <a class="dropdown-item" href="https://github.com/mike-koala-bear/turbochatter/releases/tag/v0.5.1-beta">v0.5.1-beta</a>
+    <a class="dropdown-item" href="https://github.com/mike-koala-bear/turbochatter/releases/tag/v0.5.1">v0.5.1</a>
+    <hr class="dropdown-divider">
+    <%= link_to 'All versions', versions_path, class: 'dropdown-item' %>
+</li>
