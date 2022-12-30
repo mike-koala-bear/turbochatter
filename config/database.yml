@@ -58,6 +58,7 @@ development:
 test:
   <<: *default
   database: turbochatter_test
+  secret_key_base: 85a005d60c94fb74b5d240f2b8ef035625de73eed8a6135bc90c34918b648f51e8966e50401c81d9c5c24a557e4b53bd4dacb340a656f112104b1c3e524ee2c8
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
