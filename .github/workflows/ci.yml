@@ -1,8 +1,8 @@
 name: CI
 on: [push, pull_request]
 jobs:
+  runs-on: ubuntu-latest
   steps:
-    - runs-on: ubuntu-latest
     - uses: actions/checkout@v1
     - name: Setup Ruby
       uses: actions/setup-ruby@v1
