@@ -12,3 +12,5 @@ jobs:
           bundler-cache: true
       - run: bundle exec rails db:create db:migrate db:seed
       - run: bundle exec rails test
+      - name: Checkout
+        uses: actions/checkout@v2.6.0
