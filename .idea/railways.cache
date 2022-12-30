@@ -1,7 +1,10 @@
-do /Users/vitalyamos/.rvm/rubies/ruby-3.1.1/bin/ruby -x /Users/vitalyamos/Documents/GitHub/turbochatter/bin/bundle exec /Users/vitalyamos/.rvm/rubies/ruby-3.1.1/bin/ruby /Users/vitalyamos/Documents/GitHub/turbochatter/bin/rails routes --trace 
+do /Users/vitalyamos/.rvm/rubies/ruby-3.1.3/bin/ruby -x /Users/vitalyamos/RubymineProjects/turbochatter/bin/bundle exec /Users/vitalyamos/.rvm/rubies/ruby-3.1.3/bin/ruby /Users/vitalyamos/RubymineProjects/turbochatter/bin/rails routes --trace 
 Ruby enVironment Manager 1.29.12-next (master) (c) 2009-2020 Michal Papis, Piotr Kuczynski, Wayne E. Seguin
 
                                   Prefix Verb   URI Pattern                                                                                       Controller#Action
+                                versions GET    /versions(.:format)                                                                               versions#index
+                               dashboard GET    /dashboard(.:format)                                                                              dashboard#index
+                         admin_dashboard GET    /admin/dashboard(.:format)                                                                        admin#dashboard
                            room_messages GET    /rooms/:room_id/messages(.:format)                                                                messages#index
                                          POST   /rooms/:room_id/messages(.:format)                                                                messages#create
                         new_room_message GET    /rooms/:room_id/messages/new(.:format)                                                            messages#new

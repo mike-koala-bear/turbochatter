@@ -34,9 +34,14 @@
         justify-content: flex-end;
       }
     </style>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
   </head>
   <body>
-    <%= render "layouts/navbar" %>
+    <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
 </html>
