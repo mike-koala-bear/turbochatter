@@ -12,14 +12,14 @@
     "lib": "lib",
     "test": "test"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "electron": "^22.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mike-koala-bear/turbochatter.git"
-  },
+  "repository": "git+https://github.com/mike-koala-bear/turbochatter.git",
   "author": "mike-koala-bear",
   "license": "ISC",
   "bugs": {

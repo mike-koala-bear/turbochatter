@@ -15,9 +15,11 @@
       <li class="nav-item">
         <a class="nav-link" href="/rooms">Start Chatting</a>
       </li>
-      <li class="nav-item">
-        <%= link_to "Admin/Owner", admin_dashboard_path, class: "nav-link" %>
-      </li>
+      <% if current_user&.admin? || current_user&.owner? %>
+        <li class="nav-item">
+          <%= link_to "Admin/Owner", admin_dashboard_path, class: "nav-link" %>
+        </li>
+      <% end %>
       <%= render 'layouts/navbar_dropdown' %>
     </ul>
     <%= render 'shared/version_dropdown' %>
