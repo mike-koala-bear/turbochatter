@@ -54,7 +54,6 @@ gem 'mini_magick'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'rubocop'
 end
 
 group :development do
@@ -88,3 +87,8 @@ gem 'chartkick', '~> 4.2'
 gem 'groupdate', '~> 6.1'
 
 gem 'aws-sdk-s3'
+gem 'rspec'
+gem 'rubocop'
+
+gem 'bundler-audit', '~> 0.9.1'
+gem 'brakeman'

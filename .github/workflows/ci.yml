@@ -1,0 +1,10 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  verify:
+    uses: setup-rails/setup-rails/.github/workflows/verify.yml@v1
+    with:
+      brakeman: true
+      bundler-audit: true
+      rspec: true
+      # rubocop: true
