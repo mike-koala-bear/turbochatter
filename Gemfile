@@ -87,4 +87,8 @@ gem 'chartkick', '~> 4.2'
 gem 'groupdate', '~> 6.1'
 
 gem 'aws-sdk-s3'
+gem 'rspec'
 gem 'rubocop'
+
+gem 'bundler-audit', '~> 0.9.1'
+gem 'brakeman'
