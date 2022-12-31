@@ -14,9 +14,9 @@ jobs:
           cmd: install
       - name: Build and run test
         env:
-          DATABASE_URL: postgres://postgres:@localhost:5432/turbochatter_test
+          DATABASE_URL: postgres://postgres:@localhost:5432/test
           REDIS_URL: redis://localhost:6379/0
-          RAILS_ENV: turbochatter_test
+          RAILS_ENV: test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: 88btiia0753c8
         run: |
