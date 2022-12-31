@@ -76,7 +76,7 @@ end
 
 gem 'devise', '~> 4.8'
 
-gem 'pagy', '~> 5.10'
+gem 'pagy', '~> 6.0'
 
 gem 'noticed'
 
