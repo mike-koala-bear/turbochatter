@@ -1,0 +1,11 @@
+name: Codecov
+on: [push, pull_request]
+jobs:
+  steps:
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v3
+      with:
+        flags: unittests
+        name: codecov
+        fail_ci_if_error: true
+        verbose: true
