@@ -192,14 +192,12 @@ body {
     overflow: hidden;
 }
 
-.logout-btn {
-    transition: none !important;
-    text-align: left !important;
-    width: 100%;
-    border-radius: 0px !important;
+#bootstrap-overrides .logout-btn {
+    transition: none;
+    text-align: left;
 }
 
-.logout-btn:hover {
+#bootstrap-overrides .logout-btn:hover {
     background-color: #c33;
     color: #fff;
 }

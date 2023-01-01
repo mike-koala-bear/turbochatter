@@ -14,7 +14,7 @@
             <b>Role:</b> <%= link_to "#{user_role}", user_path(current_user), class: "msg-role-#{user_role}" %>
           </p>
         </div>
-        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn logout-btn' %>
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn rounded-0 w-100 logout-btn' %>
       </div>
     </ul>
   </div>
