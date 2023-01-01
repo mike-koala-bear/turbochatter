@@ -4,13 +4,12 @@ jobs:
   codecov:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@master
+      - uses: codecov/codecov-action@v3
         with:
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          verbose: true
           ruby-version: 3.1.3
           bundler-cache: true
-      - uses: codecov/codecov-action@v1
-        with:
-          flags: unit
-          name: codecov
-          fail_ci_if_error: true
