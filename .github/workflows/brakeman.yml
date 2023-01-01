@@ -5,6 +5,7 @@
 
 # This workflow integrates Brakeman with GitHub's Code Scanning feature
 # Brakeman is a static analysis security vulnerability scanner for Ruby on Rails applications
+# For more information see: https://brakemanscanner.org
 
 name: Brakeman Scan
 on:
