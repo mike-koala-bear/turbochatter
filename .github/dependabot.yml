@@ -10,3 +10,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+
+# TODO: Add CodeFactor app
+# TODO: Add CodeBeat app
