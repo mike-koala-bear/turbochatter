@@ -1,3 +1,8 @@
 {
-  "cSpell.words": ["turbochatter"]
+  "cSpell.words": [
+    "turbochatter"
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/vitalyamos/RubymineProjects/turbochatter/.github/workflows/ruby.yml"
+  }
 }
