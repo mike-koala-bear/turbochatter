@@ -349,7 +349,7 @@ DEPENDENCIES
   jbuilder
   mini_magick
   noticed
-  pagy (~> 6.0)
+  pagy
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
