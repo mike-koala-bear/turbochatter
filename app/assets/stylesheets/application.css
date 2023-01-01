@@ -191,3 +191,15 @@ body {
     margin: 2rem;
     overflow: hidden;
 }
+
+.logout-btn {
+    transition: none !important;
+    text-align: left !important;
+    width: 100%;
+    border-radius: 0px !important;
+}
+
+.logout-btn:hover {
+    background-color: #c33;
+    color: #fff;
+}

@@ -579,3 +579,69 @@ USE eager loading detected
 Call stack
   /Users/vitalyamos/RubymineProjects/turbochatter/app/controllers/rooms_controller.rb:32:in `show'
 
+2023-01-01 17:01:33[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:6:in `block in _app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:1:in `_app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:33:in `block in _app_views_pages_home_html_erb___2110500714190717691_33140'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:32:in `_app_views_pages_home_html_erb___2110500714190717691_33140'
+
+2023-01-01 17:01:33[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:room]
+  Add to your query: .includes([:room])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:9:in `block in _app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:1:in `_app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:33:in `block in _app_views_pages_home_html_erb___2110500714190717691_33140'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:32:in `_app_views_pages_home_html_erb___2110500714190717691_33140'
+
+2023-01-01 17:02:59[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:6:in `block in _app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:1:in `_app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:33:in `block in _app_views_pages_home_html_erb___2110500714190717691_33140'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:32:in `_app_views_pages_home_html_erb___2110500714190717691_33140'
+
+2023-01-01 17:02:59[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:room]
+  Add to your query: .includes([:room])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:9:in `block in _app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:1:in `_app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:33:in `block in _app_views_pages_home_html_erb___2110500714190717691_33140'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:32:in `_app_views_pages_home_html_erb___2110500714190717691_33140'
+
+2023-01-01 17:08:05[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:6:in `block in _app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:1:in `_app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:33:in `block in _app_views_pages_home_html_erb___2110500714190717691_33140'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:32:in `_app_views_pages_home_html_erb___2110500714190717691_33140'
+
+2023-01-01 17:08:05[WARN] user: vitalyamos
+GET /
+USE eager loading detected
+  Message => [:room]
+  Add to your query: .includes([:room])
+Call stack
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:9:in `block in _app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/messages/_message_preview.html.erb:1:in `_app_views_messages__message_preview_html_erb___1633330279263653217_33220'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:33:in `block in _app_views_pages_home_html_erb___2110500714190717691_33140'
+  /Users/vitalyamos/RubymineProjects/turbochatter/app/views/pages/home.html.erb:32:in `_app_views_pages_home_html_erb___2110500714190717691_33140'
+
