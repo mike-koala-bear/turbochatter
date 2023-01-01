@@ -1,4 +1,4 @@
-name: Codecov
+name: Codecov Analysis
 on: [push, pull_request]
 jobs:
   codecov:
@@ -9,7 +9,6 @@ jobs:
         with:
           flags: unittests
           name: codecov-umbrella
-          # fail_ci_if_error: true
           verbose: true
           ruby-version: 3.1.3
           bundler-cache: true
