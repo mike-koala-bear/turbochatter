@@ -30,7 +30,7 @@ gem 'stimulus-rails'
 gem 'jbuilder'
 
 # Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.0'
+gem 'redis', '~> 5.0'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -83,6 +83,7 @@ gem 'bundler-audit', '~> 0.9.1'
 gem 'chartkick', '~> 4.2'
 gem 'devise', '~> 4.8'
 gem 'groupdate', '~> 6.1'
+gem 'pagy', '~> 6.0'
 gem 'noticed'
 gem 'pagy', '~> 5.10'
 gem 'redcarpet', '~> 3.5.1'
