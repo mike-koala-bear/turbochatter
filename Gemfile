@@ -58,6 +58,9 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  # gem 'better_errors'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -74,21 +77,14 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'devise', '~> 4.8'
-
-gem 'pagy', '~> 6.0'
-
-gem 'noticed'
-
-gem 'redcarpet', '~> 3.5.1'
-
-gem 'chartkick', '~> 4.2'
-
-gem 'groupdate', '~> 6.1'
-
 gem 'aws-sdk-s3'
+gem 'brakeman'
+gem 'bundler-audit', '~> 0.9.1'
+gem 'chartkick', '~> 4.2'
+gem 'devise', '~> 4.8'
+gem 'groupdate', '~> 6.1'
+gem 'pagy'
+gem 'noticed'
+gem 'redcarpet', '~> 3.5.1'
 gem 'rspec'
 gem 'rubocop'
-
-gem 'bundler-audit', '~> 0.9.1'
-gem 'brakeman'
