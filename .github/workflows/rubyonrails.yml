@@ -19,12 +19,12 @@ jobs:
         ports:
           - "5432:5432"
         env:
-          POSTGRES_DB: turbochatter_test
+          POSTGRES_DB: test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
     env:
-      RAILS_ENV: turbochatter_test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/turbochatter_test"
+      RAILS_ENV: test
+      DATABASE_URL: "postgres://rails:password@localhost:5432/test"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
