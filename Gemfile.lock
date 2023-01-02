@@ -362,7 +362,7 @@ DEPENDENCIES
   rspec
   rubocop
   rubocop-rspec (~> 2.16)
-  ruby_audit
+  ruby_audit (~> 2.1)
   selenium-webdriver
   sprockets-rails
   stimulus-rails

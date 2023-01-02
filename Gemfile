@@ -87,5 +87,6 @@ gem 'pagy'
 gem 'redcarpet', '~> 3.5.1'
 gem 'rspec'
 gem 'rubocop'
+
 gem 'rubocop-rspec', '~> 2.16'
-gem 'ruby_audit'
+gem 'ruby_audit', '~> 2.1'
