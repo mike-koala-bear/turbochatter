@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MessagesController < ApplicationController
   include MessagesHelper
   include MessageParser
@@ -16,10 +18,10 @@ class MessagesController < ApplicationController
 
     return unless should_create_message
 
-    unless @message.save
-      render turbo_stream: turbo_stream.update('message_error', partial: 'shared/message_error',
-                                                        locals: { message: @message.errors.full_messages.join(', ') })
-    end
+    return if @message.save
+
+    render turbo_stream: turbo_stream.update('message_error', partial: 'shared/message_error',
+                                                              locals: { message: @message.errors.full_messages.join(', ') })
   end
 
   private

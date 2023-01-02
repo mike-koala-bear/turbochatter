@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Turbochatter
   class UserStatus < Application
     config.after_initialize do

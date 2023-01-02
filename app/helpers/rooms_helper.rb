@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RoomsHelper
   def search_rooms
     if params[:name_search].present? && params[:name_search].length.positive?
