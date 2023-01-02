@@ -1,21 +1,23 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  # GET Actions
   get 'versions', to: 'versions#index'
   get 'dashboard', to: 'dashboard#index'
   get 'admin/dashboard'
+
   resources :rooms do
     resources :messages
     collection do
       post :search
     end
   end
+
   # leave_room_path(room)
   get 'rooms/leave/:id', to: 'rooms#leave', as: 'leave_room'
   # join_room_path(room)
   get 'rooms/join/:id', to: 'rooms#join', as: 'join_room'
 
-  root 'pages#home'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
@@ -23,5 +25,5 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'user/:id', to: 'users#show', as: 'user'
   # Defines the root path route ("/")
-  # root "articles#index"
+  root 'pages#home'
 end
