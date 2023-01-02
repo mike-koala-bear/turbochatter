@@ -7,4 +7,3 @@ jobs:
       brakeman: true
       bundler-audit: true
       rspec: true
-      # rubocop: true
