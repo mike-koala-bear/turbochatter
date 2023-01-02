@@ -10,5 +10,4 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-# TODO: Add RubyCI app to repo
-# TODO: Setup RubyCI to run on PRs
+# TODO: Uncomment the following lines to enable Dependabot version updates
