@@ -1,6 +1,6 @@
 workflows:
   my-workflow:
-    name: My workflow name
+    name: CI/CD Workflow
     environment:
       xcode: latest     # Define latest, edge or version (e.g. 11.2)
       node: latest     # Define default, latest, current, lts, carbon (or another stream), nightly or version
