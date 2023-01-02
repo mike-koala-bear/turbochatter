@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   include Pagy::Backend
   before_action :turbo_frame_request_variant
@@ -19,8 +21,8 @@ class ApplicationController < ActionController::Base
     # return if currently on edit user page
     return if request.path.include?('/users')
 
-    if current_user.username.blank?
-      redirect_to edit_user_registration_path, alert: 'Please update your username before continuing.'
-    end
+    return unless current_user.username.blank?
+
+    redirect_to edit_user_registration_path, alert: 'Please update your username before continuing.'
   end
 end
