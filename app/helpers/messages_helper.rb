@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MessagesHelper
   def parse_at_mentions(message_body)
     message_body.gsub(/@([a-zA-Z0-9_]+)/) do |match|

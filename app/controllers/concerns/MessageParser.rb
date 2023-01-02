@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MessageParser
   extend ActiveSupport::Concern
 
@@ -10,32 +12,31 @@ module MessageParser
       should_create_message = status_manager(command)
       help_manager(command)
     end
-    return should_create_message
+    should_create_message
   end
 
   def role_manager(command)
-    if command[0] == @role
-      return unless current_user
-      return unless current_user.admin? || current_user.owner? || current_user.moderator?
+    return unless command[0] == @role
+    return unless current_user
+    return unless current_user.admin? || current_user.owner? || current_user.moderator?
 
-      target_username = command[1]
-      target_role = command[2]
+    target_username = command[1]
+    target_role = command[2]
 
-      target_user = User.find_by(username: target_username)
-      role = User.roles[target_role]
+    target_user = User.find_by(username: target_username)
+    role = User.roles[target_role]
 
-      @message.body += "Target user: #{target_user.username}, Role: #{target_role}"
-      target_user.update(role:) if target_user && role
-    end
+    @message.body += "Target user: #{target_user.username}, Role: #{target_role}"
+    target_user.update(role:) if target_user && role
   end
 
   def random_manager(command)
-    if command[0] == @random
-      lower_bound = command[1].to_i
-      upper_bound = command[2].to_i
-      random_number = rand(lower_bound..upper_bound)
-      @message.body = "Rolled between #{lower_bound} and #{upper_bound}. Got: #{random_number}"
-    end
+    return unless command[0] == @random
+
+    lower_bound = command[1].to_i
+    upper_bound = command[2].to_i
+    random_number = rand(lower_bound..upper_bound)
+    @message.body = "Rolled between #{lower_bound} and #{upper_bound}. Got: #{random_number}"
   end
 
   def status_manager(command)
@@ -50,17 +51,17 @@ module MessageParser
     when @online
       current_user.update(status: User.statuses[:online])
     end
-    return false
+    false
   end
 
   def help_manager(command)
-    if command[0] == @help
-      result = "\n"
-      @command_options.each do |com|
-        result += "\n#{com[0]} #{com[1]}\n"
-      end
-      @message.body += result
+    return unless command[0] == @help
+
+    result = "\n"
+    @command_options.each do |com|
+      result += "\n#{com[0]} #{com[1]}\n"
     end
+    @message.body += result
   end
 
   private

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PagesController < ApplicationController
   after_action :set_status
   before_action :recent_messages, only: [:home]
