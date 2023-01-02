@@ -2,6 +2,6 @@
 
 class VersionsController < ApplicationController
   def index
-    @current_version = '1.1.0'
+    @current_version = '1.2.7'
   end
 end
