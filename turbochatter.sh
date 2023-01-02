@@ -35,4 +35,4 @@ echo "Seeding database..."
 bundle exec rails db:seed
 echo "Starting server..."
 bundle exec rails server
-# echo "Turbochatter started successfully - visit http://localhost:3000"
+echo "Turbochatter started successfully - visit http://localhost:3000"
