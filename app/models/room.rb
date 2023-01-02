@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This is the room model
 class Room < ApplicationRecord
   validates_uniqueness_of :name
   scope :public_rooms, -> { where(is_private: false) }
