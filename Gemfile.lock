@@ -324,6 +324,7 @@ GEM
     zeitwerk (2.6.6)
 
 PLATFORMS
+  ruby
   x86_64-darwin-22
   x86_64-linux
 
