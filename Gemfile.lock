@@ -151,6 +151,9 @@ GEM
     importmap-rails (1.1.5)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    io-console (0.6.0)
+    irb (1.6.2)
+      reline (>= 0.3.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -238,6 +241,8 @@ GEM
     redis-client (0.11.2)
       connection_pool
     regexp_parser (2.6.1)
+    reline (0.3.2)
+      io-console (~> 0.5)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -337,6 +342,7 @@ DEPENDENCIES
   groupdate
   image_processing (~> 1.2)
   importmap-rails
+  irb
   jbuilder
   mini_magick
   noticed
@@ -346,6 +352,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   redcarpet
   redis (~> 5.0)
+  reline
   rspec
   rubocop
   rubocop-rails
