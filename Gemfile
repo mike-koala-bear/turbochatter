@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.3'
+ruby '3.2.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
@@ -53,14 +53,12 @@ gem 'mini_magick'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', platforms: %i[mri mingw x64_mingw]
+  # gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rubocop-rails'
-  gem 'ruby_audit'
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  # gem 'better_errors'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'web-console'
@@ -81,12 +79,14 @@ end
 
 gem 'aws-sdk-s3'
 gem 'brakeman'
-gem 'bundler-audit', '~> 0.9.1'
+gem 'bundler-audit'
 gem 'chartkick', '~> 4.2'
 gem 'devise', '~> 4.8'
-gem 'groupdate', '~> 6.1'
+gem 'groupdate'
+gem 'irb'
 gem 'noticed'
 gem 'pagy'
-gem 'redcarpet', '~> 3.5.1'
+gem 'redcarpet'
+gem 'reline'
 gem 'rspec'
 gem 'rubocop'
