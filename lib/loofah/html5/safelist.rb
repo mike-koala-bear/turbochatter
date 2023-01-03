@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'set'
-
 module Loofah
   module HTML5 # :nodoc:
     #
