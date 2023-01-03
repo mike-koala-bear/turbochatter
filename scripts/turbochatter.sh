@@ -1,7 +1,3 @@
-# shellcheck disable=SC1009
-# shellcheck disable=SC1073
-# shellcheck disable=SC2046
-# shellcheck disable=SC2006
 if [ `yarn -v 1.22.19` ]; then
   echo "Yarn is already installed / up to date"
 else
@@ -12,10 +8,6 @@ else
   echo "Yarn install complete"
 fi
 
-# shellcheck disable=SC2215
-# shellcheck disable=SC2154
-# shellcheck disable=SC1072
-# shellcheck disable=SC1076
 if [ `bundle -v 2.3.12` ]; then
   echo "Bundler is already installed / up to date"
 else
