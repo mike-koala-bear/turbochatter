@@ -2,15 +2,33 @@ name: CI/CD
 on: [push, pull_request]
 
 jobs:
-  build:
+#  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: ruby/setup-ruby@v1
-      with:
-        bundler-cache: true
-    - name: Run tests
-      run: bundle exec rspec
-    - run: bundle exec rubocop
-    - run: bundle exec brakeman
-    - run: bundle exec bundler-audit
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Run tests
+        run: bundle exec rspec
+      - run: bundle exec rubocop
+      - run: bundle exec brakeman
+      - run: bundle exec bundler-audit
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+        - name: Checkout code
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - name: Lint Code Base
+          uses: github/super-linter@v4
+          env:
+            VALIDATE_ALL_CODEBASE: false
+            DEFAULT_BRANCH: main
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
