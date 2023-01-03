@@ -44,3 +44,6 @@ codecov.SHA256SUM.sig
 
 # Ignore lib folder for Linting
 /lib
+
+# Ignore scripts folder for Linting
+/scripts
