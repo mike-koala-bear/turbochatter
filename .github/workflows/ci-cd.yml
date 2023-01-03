@@ -34,8 +34,8 @@ jobs:
         run: bundle add code-scanning-rubocop --version 0.3.0 --skip-install
       - name: Install dependencies
         run: bundle install
-      - name: Rubocop run
-        run: bundle exec rubocop
+      - name: Brakeman run
+        run: bundle exec brakeman
       - name: Upload Sarif output
         uses: github/codeql-action/upload-sarif@v2
         with:
