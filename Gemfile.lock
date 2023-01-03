@@ -115,7 +115,6 @@ GEM
     connection_pool (2.3.0)
     crass (1.0.6)
     date (3.3.3)
-    debug (1.7.1)
     debug_inspector (1.1.0)
     devise (4.8.1)
       bcrypt (~> 3.0)
@@ -337,7 +336,6 @@ DEPENDENCIES
   bundler-audit
   capybara
   chartkick (~> 4.2)
-  debug
   devise (~> 4.8)
   groupdate
   image_processing (~> 1.2)
