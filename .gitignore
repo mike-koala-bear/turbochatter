@@ -41,3 +41,6 @@
 codecov
 codecov.SHA256SUM
 codecov.SHA256SUM.sig
+
+# Ignore this active storage file for CI testing / linting
+/node_modules/@rails/activestorage/app/assets/javascripts/activestorage.esm.js
