@@ -23,6 +23,32 @@ jobs:
       - run: bundle exec rubocop
       - run: bundle exec brakeman
       - run: bundle exec bundler-audit
+  verify:
+    uses: setup-rails/setup-rails/.github/workflows/verify.yml@v1
+    with:
+      brakeman: true
+      bundler-audit: true
+      rspec: true
+  brakeman-scan:
+    permissions:
+      contents: read
+      security-events: write
+    name: Brakeman Scan
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository to the GitHub Actions runner
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Customize the ruby version depending on your needs
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4
+        with:
+          ruby-version: '3.2.0'
+      - name: Setup Brakeman
+        env:
+          BRAKEMAN_VERSION: '4.10'
+        run: |
+          gem install brakeman --version $BRAKEMAN_VERSION
   lint:
     runs-on: ubuntu-latest
     steps:
