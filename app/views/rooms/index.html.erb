@@ -9,6 +9,9 @@
 
 <div id="chatroom_container" class="row bg-dark text-light">
   <div id="side_panel" class="col-md-4 col-sm-4">
+    <div class="inbox-header">
+      Inbox
+    </div>
     <li class="list-group-item d-flex align-items-center justify-content-between user_list_item">
       <div class="icon-container">
         <%= link_to image_tag(current_user.chat_avatar, class: 'chat_pfp'), current_user %>
@@ -18,7 +21,7 @@
         </div>
       </div>
       <div class="ms-2 me-auto username">
-        <%= link_to current_user.username, current_user, class:"msg-role-#{current_user.role}" %>
+        <%= link_to current_user.username, current_user, class: "msg-role-#{current_user.role}" %>
       </div>
     </li>
     <h4>Users</h4>
