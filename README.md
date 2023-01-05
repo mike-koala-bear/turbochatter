@@ -1,7 +1,7 @@
 # Turbochatter
 ### Statuses:
-[![CI](https://github.com/mike-koala-bear/turbochatter/actions/workflows/ci.yml/badge.svg)](https://github.com/mike-koala-bear/turbochatter/actions/workflows/ci.yml)
+[![Brakeman](https://github.com/mike-koala-bear/turbochatter/actions/workflows/main.yml/badge.svg)](https://github.com/mike-koala-bear/turbochatter/actions/workflows/main.yml)
+[![CI/CD](https://github.com/mike-koala-bear/turbochatter/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/mike-koala-bear/turbochatter/actions/workflows/ci-cd.yml)
 [![CodeQL](https://github.com/mike-koala-bear/turbochatter/actions/workflows/codeql.yml/badge.svg)](https://github.com/mike-koala-bear/turbochatter/actions/workflows/codeql.yml)
-[![Codecov](https://github.com/mike-koala-bear/turbochatter/actions/workflows/codecov.yml/badge.svg)](https://github.com/mike-koala-bear/turbochatter/actions/workflows/codecov.yml)
 [![Ruby](https://github.com/mike-koala-bear/turbochatter/actions/workflows/ruby.yml/badge.svg)](https://github.com/mike-koala-bear/turbochatter/actions/workflows/ruby.yml)
-[![CodeFactor](https://www.codefactor.io/repository/github/mike-koala-bear/turbochatter/badge)](https://www.codefactor.io/repository/github/mike-koala-bear/turbochatter)
+[![Ruby on Rails CI](https://github.com/mike-koala-bear/turbochatter/actions/workflows/rubyonrails.yml/badge.svg)](https://github.com/mike-koala-bear/turbochatter/actions/workflows/rubyonrails.yml)
