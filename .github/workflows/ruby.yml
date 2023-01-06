@@ -38,3 +38,15 @@ jobs:
       run: bundle exec bundler-audit --update
     - name: Run yarn tests
       run: yarn test
+    - name: Run yarn dependencies checks
+      run: yarn audit
+    - name: Setup Ruby Packages
+      uses: ruby/setup-ruby-pkgs@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler: true
+        bundler-cache: true
+        # cache-version:
+        rubygems: true
+        # working-directory:
+        brew: true # macOS
