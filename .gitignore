@@ -36,8 +36,3 @@
 
 # Ignore all node_modules
 /node_modules
-
-# Ignore codecov files
-codecov
-codecov.SHA256SUM
-codecov.SHA256SUM.sig

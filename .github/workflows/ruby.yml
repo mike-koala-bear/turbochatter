@@ -40,7 +40,7 @@ jobs:
       run: yarn test
     - name: Run yarn dependencies checks
       run: yarn audit
-    - name: Setup Ruby Packages
+    - name: Setup ruby dependencies
       uses: ruby/setup-ruby-pkgs@v1
       with:
         ruby-version: ${{ matrix.ruby }}
@@ -49,3 +49,13 @@ jobs:
         rubygems: 3.4.1
         # working-directory:
         brew: true # macOS
+    - name: Setup Node
+      uses: actions/checkout@v3
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.12.1
+        cache: 'yarn'
+      - name: Setup Yarn
+        uses: DerYeger/yarn-setup-action@master
+        with:
+          node-version: 18.12.1
