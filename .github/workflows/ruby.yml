@@ -47,6 +47,6 @@ jobs:
         bundler: true
         bundler-cache: true
         # cache-version:
-        rubygems: true
+        rubygems: 3.4.1
         # working-directory:
         brew: true # macOS
