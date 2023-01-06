@@ -30,11 +30,11 @@ jobs:
         bundler-cache: true
     - name: Run tests
       run: bundle exec rspec
-    - name: Run brakeman
+    - name: Run security checks - brakeman
       run: bundle exec brakeman
-    - name: Run rubocop
+    - name: Run security checks - rubocop
       run: bundle exec rubocop --parallel -A
-    - name: Run bundler-audit
-      run: bundle exec bundler-audit
+    - name: Run security checks - bundler-audit
+      run: bundle exec bundler-audit --update
     - name: Run yarn tests
       run: yarn test
