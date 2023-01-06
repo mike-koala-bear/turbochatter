@@ -45,17 +45,15 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
-        # cache-version:
         rubygems: 3.4.1
-        # working-directory:
-        brew: true # macOS
+        brew: true
     - name: Setup Node
       uses: actions/checkout@v3
       uses: actions/setup-node@v3
       with:
         node-version: 18.12.1
         cache: 'yarn'
-      - name: Setup Yarn
-        uses: DerYeger/yarn-setup-action@master
-        with:
-          node-version: 18.12.1
+    - name: Setup Yarn
+      uses: DerYeger/yarn-setup-action@master
+      with:
+        node-version: 18.12.1
