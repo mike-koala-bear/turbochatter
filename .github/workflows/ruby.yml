@@ -44,7 +44,6 @@ jobs:
       uses: ruby/setup-ruby-pkgs@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-        bundler: true
         bundler-cache: true
         # cache-version:
         rubygems: 3.4.1
