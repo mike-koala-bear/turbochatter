@@ -5,30 +5,45 @@
 # This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
 # For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
 
-name: Ruby
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+name: Ruby CI
+on: [push, pull_request]
 
 permissions:
   contents: read
 
 jobs:
   test:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['3.2.0']
+        os:
+          - macOS-latest
+          - ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: ${{ matrix.ruby-version }}
+        ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
     - name: Run tests
       run: bundle exec rspec
-    - name: Run brakeman
+    - name: Run security checks - brakeman
       run: bundle exec brakeman
+    - name: Run security checks - rubocop
+      run: bundle exec rubocop --parallel -A
+    - name: Run security checks - bundler-audit
+      run: bundle exec bundler-audit --update
+    - name: Setup ruby dependencies
+      uses: ruby/setup-ruby-pkgs@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
+        rubygems: 3.4.1
+    - name: Setup yarn dependencies | Configure yarn
+      run: |
+        yarn install --check-files
+        yarn test
+        yarn audit
+        yarn install
+        yarn install -p
