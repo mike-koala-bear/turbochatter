@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: turbochatter_production
   username: turbochatter
   password: <%= ENV["TURBOCHATTER_DATABASE_PASSWORD"] %>

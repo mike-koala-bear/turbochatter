@@ -1,3 +1,1 @@
-web: bin/rails server -p ${PORT:-5000} -e $RAILS_ENV
-worker: sidekiq
-release: bin/rails db:migrate
+web: rails db:migrate && rails server -b 0.0.0.0 -p {PORT: -3000}
