@@ -75,6 +75,11 @@ body {
 
 .username {
     overflow: hidden;
+    text-decoration: none;
+}
+
+.username:hover {
+    text-decoration: underline;
 }
 
 .chat_pfp {
@@ -178,10 +183,6 @@ body {
     }
 }
 
-.btn-blue {
-    background-color: #10c4dc;
-}
-
 .navbar-pfp {
     border-radius: 50%;
 }
@@ -191,14 +192,12 @@ body {
     overflow: hidden;
 }
 
-#bootstrap-overrides .logout-btn {
-    transition: none;
-    text-align: left;
+.role-link {
+    text-decoration: none;
 }
 
-#bootstrap-overrides .logout-btn:hover {
-    background-color: #c33;
-    color: #fff;
+.role-link:hover {
+    text-decoration: underline;
 }
 
 .inbox-header {
@@ -209,4 +208,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/*
+  Bootstrap Overrides Classes
+*/
+
+#bootstrap-overrides .logout-btn {
+    transition: none;
+    text-align: left;
+    color: #fff;
+    background: #35363d;
+}
+
+#bootstrap-overrides .logout-btn:hover {
+    background-color: #c33;
+    color: #fff;
+}
+
+#bootstrap-overrides .btn-blue {
+    background-color: #10c4dc;
+}
+
+#bootstrap-overrides .navbar-role {
+    padding: 0.25rem 1rem;
+}
+
+#bootstrap-overrides .bg-dark {
+    background-color: #343a40 !important;
+}
+
+#bootstrap-overrides .btn-group-vertical>.btn, .btn-group>.btn {
+    position: relative;
+    flex: 0 0 auto !important;
 }

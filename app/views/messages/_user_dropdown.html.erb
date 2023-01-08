@@ -8,7 +8,7 @@
       <%= content_tag(:div, user.username, style: "color: #fff") %>
       <%= content_tag(:p, user.role, class: "msg-role-#{user.role}") %>
     </div>
-    <li><hr class="dropdown-divider"></li>
+    <hr class="dropdown-divider">
     <li><%= link_to "Message", user, class: "dropdown-item", style: "color: #fff" %></li>
     <li><%= link_to "Another Option", "#", class: "dropdown-item", style: "color: #fff" %></li>
   </ul>
