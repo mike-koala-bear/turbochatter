@@ -13,7 +13,7 @@
     "test": "test"
   },
   "devDependencies": {
-    "electron": "^22.0.0"
+    "electron": "^22.3.24"
   },
   "scripts": {
     "test": "bundle exec rubocop --parallel -A && bundle exec rspec && bundle exec brakeman && bundle exec bundle-audit",
