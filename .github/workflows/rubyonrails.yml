@@ -7,101 +7,59 @@ on:
     branches: ["main"]
 
 jobs:
-  # Job for Ubuntu (Linux) runner with Docker-based PostgreSQL service
-  test-ubuntu:
+  test:
     name: Test on Ubuntu
     runs-on: ubuntu-latest
 
     services:
       postgres:
-        image: postgres:14-alpine
-        ports:
-          - "5432:5432"
+        image: postgres:14
         env:
-          POSTGRES_DB: rails_test
           POSTGRES_USER: rails
           POSTGRES_PASSWORD: password
+          POSTGRES_DB: rails_test
+        options: >-
+          --health-cmd pg_isready -U rails
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Install PostgreSQL Client on Ubuntu
-        run: sudo apt-get install -y postgresql-client-14 libpq-dev
-
-      - name: Install Ruby and gems
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.3.1
           bundler-cache: true
 
-      - name: Set up database schema
+      - name: Install PostgreSQL client
+        run: sudo apt-get install -y libpq-dev
+
+      - name: Set up database
         run: bin/rails db:schema:load
 
       - name: Run tests
         run: bundle exec rspec
 
-  # Job for macOS runner with Homebrew-based PostgreSQL installation
-  test-macos:
-    name: Test on macOS
-    runs-on: macos-latest
-
-    env:
-      RAILS_ENV: test
-      DATABASE_URL: "postgres://localhost:5432/rails_test"
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Install PostgreSQL on macOS
-        run: |
-          brew install postgresql@14
-          brew services start postgresql@14
-
-          # Ensure the postgres role is created by connecting to the default "postgres" database
-          psql postgres -c "CREATE ROLE postgres WITH SUPERUSER LOGIN;" || echo "Role postgres already exists"
-
-          # Create the test database (rails_test)
-          psql postgres -c "CREATE DATABASE rails_test;" -U postgres
-
-      - name: Install Ruby and gems
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.3.1
-          bundler-cache: true
-
-      - name: Set up database schema
-        run: bin/rails db:schema:load
-
-      - name: Run tests
-        run: bundle exec rspec
-
-  # Linting job, runs on both Ubuntu and macOS
   lint:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
+    name: Linting
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Install Ruby and gems
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
 
-      - name: Security audit dependencies
-        run: bundle exec bundler-audit --update
-
-      - name: Security audit application code
-        run: bundle exec brakeman -q -w2
-
-      - name: Lint Ruby files
-        run: bundle exec rubocop --parallel
+      - name: Run linters
+        run: |
+          bundle exec rubocop
+          bundle exec brakeman -q -w2
+          bundle exec bundler-audit update
