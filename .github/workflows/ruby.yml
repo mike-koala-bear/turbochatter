@@ -20,30 +20,30 @@ jobs:
           - ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby }}
-        bundler-cache: true
-    - name: Run tests
-      run: bundle exec rspec
-    - name: Run security checks - brakeman
-      run: bundle exec brakeman
-    - name: Run security checks - rubocop
-      run: bundle exec rubocop --parallel -A
-    - name: Run security checks - bundler-audit
-      run: bundle exec bundler-audit --update
-    - name: Setup ruby dependencies
-      uses: ruby/setup-ruby-pkgs@v1
-      with:
-        ruby-version: ${{ matrix.ruby }}
-        bundler-cache: true
-        rubygems: 3.4.1
-    - name: Setup yarn dependencies | Configure yarn
-      run: |
-        yarn install --check-files
-        yarn test
-        yarn audit
-        yarn install
-        yarn install -p
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3.1
+          bundler-cache: true
+      - name: Run tests
+        run: bundle exec rspec
+      - name: Run security checks - brakeman
+        run: bundle exec brakeman
+      - name: Run security checks - rubocop
+        run: bundle exec rubocop --parallel -A
+      - name: Run security checks - bundler-audit
+        run: bundle exec bundler-audit --update
+      - name: Setup ruby dependencies
+        uses: ruby/setup-ruby-pkgs@v1
+        with:
+          ruby-version: 3.3.1
+          bundler-cache: true
+          rubygems: 3.4.1
+      - name: Setup yarn dependencies | Configure yarn
+        run: |
+          yarn install --check-files
+          yarn test
+          yarn audit
+          yarn install
+          yarn install -p
