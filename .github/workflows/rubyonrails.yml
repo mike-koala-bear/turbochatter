@@ -7,20 +7,20 @@ on:
     branches: ["main"]
 
 jobs:
-  test:
-    runs-on: ${{ matrix.os }}
+  # Job for Ubuntu (Linux) runner with Docker-based PostgreSQL service
+  test-ubuntu:
+    name: Test on Ubuntu
+    runs-on: ubuntu-latest
+
     services:
       postgres:
-        image: postgres:14-alpine # Use PostgreSQL 14 for both runners
+        image: postgres:14-alpine
         ports:
           - "5432:5432"
         env:
           POSTGRES_DB: rails_test
           POSTGRES_USER: rails
           POSTGRES_PASSWORD: password
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest] # Specify both Ubuntu and macOS
 
     env:
       RAILS_ENV: test
@@ -30,17 +30,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Conditional step for installing PostgreSQL client libraries on Ubuntu
       - name: Install PostgreSQL Client on Ubuntu
-        if: runner.os == 'Linux' # This will only run on the Ubuntu runner
         run: sudo apt-get install -y postgresql-client-14 libpq-dev
-
-      # Conditional step for installing PostgreSQL on macOS
-      - name: Install PostgreSQL Client on macOS
-        if: runner.os == 'macOS' # This will only run on the macOS runner
-        run: |
-          brew install postgresql@14
-          brew link --force postgresql@14
 
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
@@ -53,6 +44,37 @@ jobs:
       - name: Run tests
         run: bundle exec rspec
 
+  # Job for macOS runner with Homebrew-based PostgreSQL installation
+  test-macos:
+    name: Test on macOS
+    runs-on: macos-latest
+
+    env:
+      RAILS_ENV: test
+      DATABASE_URL: "postgres://localhost:5432/rails_test"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install PostgreSQL on macOS
+        run: |
+          brew install postgresql@14
+          brew services start postgresql@14
+          psql -c "CREATE DATABASE rails_test;" -U postgres
+
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Set up database schema
+        run: bin/rails db:schema:load
+
+      - name: Run tests
+        run: bundle exec rspec
+
+  # Linting job, runs on both Ubuntu and macOS
   lint:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -68,7 +90,6 @@ jobs:
         with:
           bundler-cache: true
 
-      # Add other lints and security checks as needed
       - name: Security audit dependencies
         run: bundle exec bundler-audit --update
 
