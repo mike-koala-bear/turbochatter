@@ -36,6 +36,7 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: 3.3.1
           bundler-cache: true
 
       - name: Set up database schema
@@ -61,6 +62,11 @@ jobs:
         run: |
           brew install postgresql@14
           brew services start postgresql@14
+
+          # Create the 'postgres' role if it doesn't exist
+          psql -c "CREATE ROLE postgres WITH SUPERUSER LOGIN;" || echo "Role postgres already exists"
+
+          # Create the test database
           psql -c "CREATE DATABASE rails_test;" -U postgres
 
       - name: Install Ruby and gems
