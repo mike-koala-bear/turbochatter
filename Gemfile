@@ -80,7 +80,7 @@ end
 gem 'aws-sdk-s3'
 gem 'brakeman'
 gem 'bundler-audit'
-gem 'chartkick', '~> 4.2'
+gem 'chartkick', '~> 5.1'
 gem 'devise', '~> 4.8'
 gem 'groupdate'
 gem 'irb'
