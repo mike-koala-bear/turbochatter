@@ -45,18 +45,13 @@ class User < ApplicationRecord
   end
 
   def status_to_css
-    case status
-    when 'online'
-      'bg-success'
-    when 'away'
-      'bg-warning'
-    when 'offline'
-      'bg-dark'
-    when 'dnd'
-      'bg-danger'
-    else
-      'bg-dark'
-    end
+    status_css_map = {
+      'online' => 'bg-success',
+      'away' => 'bg-warning',
+      'offline' => 'bg-dark',
+      'dnd' => 'bg-danger'
+    }
+    status_css_map[status] || 'bg-dark'
   end
 
   private

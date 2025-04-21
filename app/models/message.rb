@@ -22,11 +22,9 @@ class Message < ApplicationRecord
     return unless attachments.attached?
     return target if @@not_resizables.include?(target.content_type)
 
-    if target.image?
-      target.variant(resize_to_limit: [150, 150]).processed
-    elsif target.video?
-      target.variant(resize_to_limit: [150, 150]).processed
-    end
+    return unless target.image? || target.video?
+
+    target.variant(resize_to_limit: [150, 150]).processed
   end
 
   def confirm_participant

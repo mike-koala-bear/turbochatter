@@ -6,7 +6,7 @@ module MessageParser
   def parse_slash_commands(message)
     should_create_message = true
     if message.body.start_with?('/')
-      command = message.body.split(' ')
+      command = message.body.split
       role_manager(command)
       random_manager(command)
       should_create_message = status_manager(command)

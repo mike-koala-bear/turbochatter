@@ -15,7 +15,7 @@ Rails.application.configure do
   # so the app will blow up at boot-time if both `DEFAULT_URL_HOST` and
   # `HEROKU_APP_NAME` aren't defined.
 
-  host = ENV['DEFAULT_URL_HOST'] || "#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
+  host = ENV['DEFAULT_URL_HOST'] || "#{ENV.fetch('HEROKU_APP_NAME', nil)}.herokuapp.com"
   protocol = config.force_ssl ? 'https' : 'http'
 
   config.action_controller.default_url_options({
@@ -93,7 +93,7 @@ Rails.application.configure do
   config.active_support.report_deprecations = false
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
+  config.log_formatter = Logger::Formatter.new
 
   # Use a different logger for distributed setups.
   # require "syslog/logger"

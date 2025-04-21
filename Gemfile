@@ -90,4 +90,3 @@ gem 'redcarpet'
 gem 'reline'
 gem 'rspec'
 gem 'rubocop'
-
